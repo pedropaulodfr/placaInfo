@@ -1,0 +1,33 @@
+.areaPesquisa-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 400px;
+    font-family: 'Montserrat', sans-serif ;
+    background-image: url("../../assets/Imagem-Transito.png");
+    background-size: cover; /* Ajusta o tamanho para cobrir a largura da tela */
+    background-position: center center;
+}
+
+.areaPesquisa-container input[type="text"] {
+    width: 35%;
+    height: 45px;
+    margin: 20px;
+    color: #1C99E0;
+    padding-left: 10px;
+    outline: none;
+    font-size: 1em;
+    letter-spacing: .2em;
+}
+
+.areaPesquisa-container input[type="button"] {
+    width: 150px;
+    height: 50px;
+    background: #1C99E0;
+    color: white;
+    border-style: hidden;
+    text-shadow: none;
+    font-size: 1em;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif ;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.coluna-primaria {
+    font-weight: bold;
+}
+
+.coluna-secundaria {
+    width: 400px;
+}

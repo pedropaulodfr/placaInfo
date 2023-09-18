@@ -1,0 +1,33 @@
+.categoria-container {
+    display: flex;
+    justify-content: center;
+}
+.circulo {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius:  50%;
+    background-color: #1C99E0;
+    z-index: 10;
+}
+.circulo img {
+    margin: 8px;
+}
+.retangulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 28px;
+    margin-top: 24px;
+    margin-left: -10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #1C99E0;
+}
+.retangulo h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif ;
+    font-size: .85em;
+    font-weight: bold;
+}

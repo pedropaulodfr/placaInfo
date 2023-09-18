@@ -1,0 +1,8 @@
+.header-container {
+    display: flex;
+    width: 100vw;
+    height: 400px;
+    background-image: url("../../assets/Consulta-Placa.png");
+    background-size: cover; /* Ajusta o tamanho para cobrir a largura da tela */
+    background-position: center center;
+}

@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AreaPesquisa from './components/AreaPesquisa/AreaPesquisa';
+import AreaResultado from './components/AreaResultado/AreaResultado';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
+  const [estadoPesquisa, setEstadoPesquisa] = useState(false)
+  const [resultadoPesquisa, setResultadoPesquisa] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <AreaPesquisa  estadoPesquisa={setEstadoPesquisa} resultadoPesquisa={setResultadoPesquisa} />
+      {estadoPesquisa && <AreaResultado data={resultadoPesquisa} />}
+      <Footer />
     </div>
   );
 }
