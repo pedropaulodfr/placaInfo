@@ -3,7 +3,7 @@ import './TabelaHorizontal.css'
 
 const TabelaHorizontal = ({ titulosColunas, resultadosColunas }) => {
     return (
-        <div className="tabela-container">
+        <div className="tabela-horizontal-container">
             <table>
                 <thead>
                     <tr>

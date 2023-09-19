@@ -1,21 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './AreaResultado.css'
 import Categoria from "../Categoria/Categoria";
 import MotoIcon from '../../assets/motoIcon.png'
 import CarroIcon from '../../assets/carroIcon.png'
+import CaminhaoIcon from '../../assets/caminhaoIcon.png'
+import CamionetaIcon from '../../assets/CamionetaIcon.png'
+import ReboqueIcon from '../../assets/reboqueIcon.png'
+import SemiReboqueIcon from '../../assets/semireboqueIcon.png'
+import OnibusIcon from '../../assets/onibusIcon.png'
+import MicroOnibusIcon from '../../assets/microonibusIcon.png'
+import TriciculoIcon from '../../assets/triciculoIcon.png'
 import Tabela from "../Tabela/Tabela";
 import TabelaHorizontal from "../TabelaHorizontal/TabelaHorizontal";
 
 const AreaResultado = ({ data }) => {
     const tipoVeiculo = data.extra && data.extra.tipo_veiculo && data.extra.tipo_veiculo.tipo_veiculo;
-    const isCarro = tipoVeiculo == 'Automovel';
-    const icone = isCarro ? CarroIcon : MotoIcon;
     const isFipe = data.fipe && data.fipe.dados;
+    const [icone, setIcone] = useState(CarroIcon)
 
     const titulosLinhas = [
        "PLACA", "MARCA", "MODELO", "COR", "ANO FABRICAÇÃO", "ANO MODELO", "CHASSI", "MUNICÍPIO", "ORIGEM", "SITUAÇÃO"
     ]
-   
+
+    const setIconeBasedOnTipoVeiculo = (tipoVeiculo) => {
+        switch (tipoVeiculo) {
+            case "Motocicleta":
+                return MotoIcon;
+            case "Automovel":
+                return CarroIcon;
+            case "Caminhao":
+                return CaminhaoIcon;
+            case "Camioneta":
+                return CamionetaIcon;
+            case "Reboque":
+                return ReboqueIcon;
+            case "Semi-Reboque":
+                return SemiReboqueIcon;
+            case "Onibus":
+                return OnibusIcon;
+            case "Micro Onibus":
+                return MicroOnibusIcon;
+            case "Triciclo":
+                return TriciculoIcon;
+            default:
+                return CarroIcon;
+        }
+    };
+    
+    useEffect(() => {
+        const iconeTipo = setIconeBasedOnTipoVeiculo(tipoVeiculo);
+        setIcone(iconeTipo);
+    }, [tipoVeiculo]); 
+    
     const resultadosLinhas = [
         `${String(data.placa).toUpperCase()} (${String(data.placa_alternativa).toUpperCase()})`,
         String(data.marca).toUpperCase(),

@@ -1,6 +1,5 @@
 import React from "react";
 import './Heder.css'
-import Logo from '../../assets/Consulta-Placa.png'
 
 const Header = () => {
     return(

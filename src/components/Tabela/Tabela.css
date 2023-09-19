@@ -6,7 +6,6 @@ table, td, th {
 
 table {
     border-collapse: collapse;
-    width: 100%;
 }
 
 th, td {
@@ -18,5 +17,5 @@ th, td {
 }
 
 .coluna-secundaria {
-    width: 400px;
+    width: 50%;
 }
