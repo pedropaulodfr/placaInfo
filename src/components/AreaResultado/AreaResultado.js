@@ -10,12 +10,13 @@ import SemiReboqueIcon from '../../assets/semireboqueIcon.png'
 import OnibusIcon from '../../assets/onibusIcon.png'
 import MicroOnibusIcon from '../../assets/microonibusIcon.png'
 import TriciculoIcon from '../../assets/triciculoIcon.png'
+import RodaIcon from '../../assets/rodaIcon.png'
 import Tabela from "../Tabela/Tabela";
 import TabelaHorizontal from "../TabelaHorizontal/TabelaHorizontal";
 
 const AreaResultado = ({ data }) => {
     const tipoVeiculo = data.extra && data.extra.tipo_veiculo && data.extra.tipo_veiculo.tipo_veiculo;
-    const isFipe = data.fipe && data.fipe.dados;
+    const isFipe = data.fipe && data.fipe.dados && data.fipe.dados.length > 0;
     const [icone, setIcone] = useState(CarroIcon)
 
     const titulosLinhas = [
@@ -43,7 +44,7 @@ const AreaResultado = ({ data }) => {
             case "Triciclo":
                 return TriciculoIcon;
             default:
-                return CarroIcon;
+                return RodaIcon;
         }
     };
     
