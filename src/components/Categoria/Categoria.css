@@ -4,26 +4,34 @@
 }
 .circulo {
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
     width: 80px;
     height: 80px;
     border-radius:  50%;
     background-color: #1C99E0;
-    z-index: 10;
+    box-shadow: 0px -2px 15px -3px rgba(0, 0, 0, 0.3);
 }
 .circulo img {
     margin: 8px;
+    width: 55px;
+    height: 55px;
 }
 .retangulo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
+    width: 100px;
     height: 28px;
-    margin-top: 24px;
-    margin-left: -10px;
+    margin-top: 55px;
+    margin-left: -90px;
     border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
     background-color: #1C99E0;
+    box-shadow: 0px -9px 15px -3px rgba(0,0,0,0.1);
+    text-align: center;
 }
 .retangulo h1 {
     color: white;
