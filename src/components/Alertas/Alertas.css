@@ -18,6 +18,7 @@
     width: 300px;
     height: 70px;
     border-radius: 12px;
+    z-index: 99999;
 }
 
 .button-close-alerta {

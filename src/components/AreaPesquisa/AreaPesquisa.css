@@ -14,11 +14,17 @@
     width: 35%;
     height: 45px;
     margin: 20px;
-    color: #1C99E0;
+    color: #FF9001;
     padding-left: 10px;
     outline: none;
     font-size: 1em;
     letter-spacing: .2em;
+    font-weight: 600;
+}
+
+.areaPesquisa-container input[type="text"]::placeholder {
+    font-weight: normal;
+    font-style: italic
 }
 
 .areaPesquisa-container input[type="button"] {
@@ -30,4 +36,13 @@
     text-shadow: none;
     font-size: 1em;
     cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.areaPesquisa-container input[type="button"]:hover {
+    background: #FF9001;
+}
+
+.areaPesquisa-container input[type="button"]:active {
+    background: #ffaf46;
 }
