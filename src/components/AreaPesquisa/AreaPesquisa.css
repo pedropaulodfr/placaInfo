@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 400px;
+    height: 81vh;
     font-family: 'Montserrat', sans-serif ;
     background-image: url("../../assets/Imagem-Transito.png");
     background-size: cover; /* Ajusta o tamanho para cobrir a largura da tela */

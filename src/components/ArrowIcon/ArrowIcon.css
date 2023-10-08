@@ -1,0 +1,32 @@
+/* ArrowIcon.css */
+.arrow-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 48%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    animation: pulo 1s infinite alternate;
+  }
+  
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff; /* Cor da seta (neste caso, cinza escuro) */
+  }
+
+  @keyframes pulo {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
