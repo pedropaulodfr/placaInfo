@@ -7,6 +7,19 @@
     background-position: center center;
 }
 
+.home-btn {
+    font-size: 2em;
+    margin: 20px;
+    color: #ffffff;
+    opacity: .7;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.home-btn:hover {
+    opacity: 1;
+}
+
 @media (max-width: 400px) {
     .header-container {
         background-size: cover; 
